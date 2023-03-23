@@ -37,6 +37,7 @@ public class FrequencyOfCharacters {
                          Ex:
                         str = "aabcccd";
 
+
                         output:
                                 a2b1c3d1
 
