@@ -28,46 +28,14 @@ public class ElementsGreaterThanTheirRight {
         int[] arr = {10, 4, 6, 3, 5};
         int[] arr2 = {2, 4, 6, 3};
         int[] arr3 = {2, 4, 6};
-        System.out.println(find_Zehra(arr)); // [10, 6, 5]
-        System.out.println(find_Zehra(arr2)); // [6, 3]
-        System.out.println(find_Zehra(arr3)); // [6]
 
-        findBruteSolution_Zehra(arr); // 10 6 5
+        System.out.println(find_Ivan(arr)); // [10, 6, 5]
+        System.out.println(find_Ivan(arr2));
+        System.out.println(find_Ivan(arr3));
 
     }
 
     // SOLUTIONS HERE
-
-    public static void findBruteSolution_Zehra(int[] arr) {
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-
-                if (arr[j] > arr[i]) {
-                    break;
-                }
-                if (j == arr.length - 1) { //  //if 'j' reached to last index, that means array[i] is greater than all elements to its right, so print array[i]
-                    System.out.print(arr[i] + " ");
-                }
-            }
-            if (i == arr.length - 1) { // printing the last element as there is no element right to it, so consider it as last greater element
-                System.out.print(arr[i] + " ");
-            }
-        }
-    }
-
-    public static List<Integer> find_Zehra(int[] arr) {
-
-        Stack<Integer> stack = new Stack<>();
-
-        for (int each : arr) {
-            while (!stack.isEmpty() && stack.peek() < each) {
-                stack.pop();
-            }
-            stack.push(each);
-        }
-        return stack;
-    }
 
     public static Stack<Integer> find_Ivan(int[] arr) {
 
