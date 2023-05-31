@@ -1,4 +1,4 @@
-package CodingWithMosh;
+package CodingWithMosh.Intro;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class Demos {
         System.out.println(Arrays.toString(array));
         System.out.println("------------------------------------");
 
-        var list1 = new CodingWithMosh.LinkedList();
+        var list1 = new CodingWithMosh.Intro.LinkedList();
         list1.addLast(10);
         list1.addLast(20);
         list1.addLast(30);

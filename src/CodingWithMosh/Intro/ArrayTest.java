@@ -1,4 +1,4 @@
-package CodingWithMosh;
+package CodingWithMosh.Intro;
 
 public class ArrayTest {
 
