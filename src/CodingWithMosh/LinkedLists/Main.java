@@ -30,5 +30,19 @@ public class Main {
         var array = list.toArray();
         System.out.println(Arrays.toString(array));
 
+        var list1 = new LinkedList();
+        System.out.println(list.size());    // 0
+        list1.addLast(10);
+        list1.addLast(20);
+        list1.addLast(30);
+        list1.addLast(40);
+
+        list1.reverse();
+        var arr = list1.toArray();
+        System.out.println(Arrays.toString(arr));   // [30, 20, 10]
+
+        System.out.println(list1.getKthFromTheEnd(1));
+
+        list1.printMiddle();
     }
 }

@@ -1,4 +1,4 @@
-package CodingWithMosh.Solutions;
+package CodingWithMosh.Stacks.Solutions;
 
 import java.util.Arrays;
 import java.util.List;

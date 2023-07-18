@@ -18,7 +18,7 @@ public class LinkedList {
     private Node last;
     private int size;
 
-    void printNodes () {
+    void printNodes() {
 
         Node current = first;
         while (current != null) {
@@ -90,7 +90,7 @@ public class LinkedList {
     }
 
     public void deleteLast() {
-        
+
         if (isEmpty()) {
             throw new NoSuchElementException();
         } else if (first == last) {
@@ -140,5 +140,79 @@ public class LinkedList {
             current = current.next;
         }
         return array;
+    }
+
+    public void reverse() {
+
+        if (isEmpty()) return;
+
+        var current = first.next;   // assign pointers using first
+        var prev = first;
+        while (current != null) {
+
+            var next = current.next;    // assign temp pointer
+            current.next = prev;        // reverse link
+            prev = current;             // shift pointers right ->
+            current = next;
+        }
+        // Reassign last Node
+        last = first;
+        last.next = null;   // last link needs to point to null
+        // reassign first Node
+        first = prev;
+    }
+
+    public int getKthFromTheEnd(int k) {
+        if (isEmpty()) {
+            throw new IllegalStateException("Empty list.");
+        }
+        // pointers:
+        var a = first;
+        var b = first;
+        for (int i = 0; i < k - 1; i++) {
+            b = b.next;
+            if (b == null) {
+                throw new IllegalArgumentException("K larger than List size.");
+            }
+        }
+        while (b != last) {
+            a = a.next;
+            b = b.next;
+        }
+        return a.value;
+    }
+
+    public void printMiddle() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Empty list.");
+        }
+        // pointers:
+        var a = first;
+        var b = first;
+        while (b != last && b.next != last) {
+            b = b.next.next;
+            a = a.next;
+        }
+        if (b == last) {
+            System.out.println(a.value);
+        } else {
+            System.out.println(a.value + ", " + a.next.value);
+        }
+    }
+
+    public boolean hasLoop() {
+        // pointers:
+        var slow = first;
+        var fast = first;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
     }
 }

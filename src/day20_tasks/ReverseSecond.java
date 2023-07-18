@@ -23,7 +23,7 @@ public class ReverseSecond {
                     result += word.charAt(j);
                 }
                 result += " "; // " " after evoL added
-            }else {     // else block executed for index 0 (I), and index 2 (Java)
+            }else {     // else block execution for index 0 (I), and index 2 (Java)
                 result += splitSent[i] + " "; // I + " " added, then Java + " " added
             }
         }

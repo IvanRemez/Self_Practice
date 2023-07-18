@@ -22,7 +22,7 @@ public class SwapTwoVariables {
             y
             z
 
-    8.1 Write a program that swap variables x & y’ values by using a
+    8.1 Write a program that swap variables x & y values by using a
     temporary variable z
         Ex:
               x = 10

@@ -1,4 +1,6 @@
-package CodingWithMosh.Solutions;
+package CodingWithMosh.Stacks.Solutions;
+
+import CodingWithMosh.Stacks.Solutions.Stack;
 
 // We need two stacks to implement a min stack.
 // One stack holds the values, the other stack

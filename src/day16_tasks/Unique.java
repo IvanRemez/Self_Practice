@@ -24,7 +24,6 @@ public class Unique {
             if(count == 1){ // if the frequency of the character is 1, then the character is unique
                 result += ch;
             }
-
  */
             if (count != 1){
                 continue;
