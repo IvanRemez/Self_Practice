@@ -1,4 +1,4 @@
-package CodingWithMosh.Solutions;
+package CodingWithMosh.Queues.Solutions;
 
 import java.util.ArrayList;
 

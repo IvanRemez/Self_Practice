@@ -1,4 +1,4 @@
-package CodingWithMosh.Solutions;
+package CodingWithMosh.Queues.Solutions;
 
 import java.util.Queue;
 import java.util.Stack;
@@ -25,6 +25,5 @@ public class QueueReverser {
         // queue and remove them from the beginning of the queue
         for (int i = 0; i < queue.size() - k; i++)
             queue.add(queue.remove());
-
     }
 }
