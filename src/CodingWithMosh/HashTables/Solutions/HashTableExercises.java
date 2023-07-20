@@ -1,4 +1,4 @@
-package CodingWithMosh.Solutions;
+package CodingWithMosh.HashTables.Solutions;
 
 import java.util.HashMap;
 import java.util.HashSet;

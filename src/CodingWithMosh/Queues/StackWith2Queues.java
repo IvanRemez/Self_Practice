@@ -29,12 +29,13 @@ public class StackWith2Queues {
         if (isEmpty()) {
             throw new IllegalStateException();
         }
-        for (int i = 0; i < queue1.size() - 1; i++) {
-            queue2.add(queue1.remove());
+        while (queue1.size() > 1) {
+            top = queue1.remove();
+            queue2.add(top);
         }
         swapQueues();
 
-        return queue1.remove();
+        return queue2.remove();
     }
 
     public int peek() {
