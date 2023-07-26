@@ -4,7 +4,13 @@ public class ReverseString {
 
     public static void main(String[] args) {
 
-        String str = "abcdef";
+        String str = "Cydeo School";
+
+        System.out.println(reverse(str));
+
+    }
+
+    public static String reverse(String str) {
 
         String result = "";
 
@@ -12,6 +18,6 @@ public class ReverseString {
 
             result += str.charAt(i);
         }
-        System.out.println(result);
+        return result;
     }
 }
